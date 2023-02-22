@@ -22,15 +22,18 @@
 
         <div  id="alarm-setter"> 
             <div  id = "times">
-                <form action="javascript:setAlarm()">
-                    <input  id="Hour-input"  " maxlength="2"  required="True" placeholder="hour">
-                    <input  id="Minute-input" maxlength="2"  required="True" type="text" placeholder="minute">
-                    <input id="Second-input" maxlength="2"  required="True" type="text" placeholder="second">
+                <div>Enter Values to Set Alarm</div>
+                <form id = "inputform" action="javascript:setAlarm()">
+                    <input  id="Hour-input"  maxlength="2"  required="True" placeholder="hh">
+                    <input  id="Minute-input" maxlength="2"  required="True" type="text" placeholder="mm">
+                    <input id="Second-input" maxlength="2"  required="True" type="text" placeholder="ss">
                     <select  id="timeofday-input">
                         <option value="AM">AM</option>
                         <option value="PM">PM</option>
                     </select>
-                    <input name="Submit"  type="submit" value="Add Alarm"/>
+                    <div>
+                        <input id= "submitBtn"name="Submit"  type="submit" value="Add Alarm"/>
+                    </div>
                 </form>
             </div>
         </div>   
@@ -38,7 +41,9 @@
         <p id="alarms-heading"> Alarms </p>
 
        <div id="alarm-list">
-            <ul id="myList"></ul>
+           
+                 <ul id="myList"> </ul>
+   
        </div>   
 
 
