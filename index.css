@@ -1,0 +1,90 @@
+body{
+   position: relative;
+   display: block;
+   margin: auto;
+   margin-top: 50px;
+   background-color: rgb(228, 163, 163);
+}
+
+#current-time{
+    display: flex;
+    padding:10px;
+    margin: auto;
+    width: 50%;
+    font-size: 8ch;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#current-time div{
+    display: flex;
+    padding:10px;
+    text-align: center;
+    justify-content: center;
+}
+
+#current-time span{
+    margin: 0px;
+    padding-top: 10px;
+
+}
+
+#alarm-setter{
+    background-color: brown;
+    border: 1px solid black;
+    width: fit-content;
+    display: flex;
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+}
+#add-alarm{
+    width: 20%
+    t
+}
+
+#alarm-setter input{
+    width: 15%
+}
+
+
+#alarm-list{
+    position: relative;
+    border: 1px solid black;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+
+#alarm-list ul{
+    border: 1px solid black;
+    list-style-type:none;
+    margin-top: 2rem;
+}
+
+
+#alarm-list li{
+    text-align: center;
+    font-size: large;
+    margin-top: 1rem;
+
+}
+
+#alarm-list button{
+    color: white;
+    background-color: red;
+    margin-left: 5em;
+    margin-top: 2;
+}
+
+#alarms-heading{
+    font-size: 5ch; 
+    text-align: center;
+}
+
+
