@@ -36,11 +36,11 @@ window.onload = function() {
 };
 
 function setAlarm() {
-    let list = document.getElementById("alarms-list-ul");
-    inputminutes = document.getElementById("Minute-input").value;
-    inputhours = document.getElementById("Hour-input").value;
-    inputseconds = document.getElementById("Second-input").value;
-    inputtimeofday = document.getElementById("timeofday-input").value;
+    let list = document.getElementById("alarms-list-ul"); 
+     inputminutes = document.getElementById("Minute-input").value;
+     inputhours = document.getElementById("Hour-input").value;
+     inputseconds = document.getElementById("Second-input").value;
+     inputtimeofday = document.getElementById("timeofday-input").value;
 
     // input forms validations 
 
@@ -48,6 +48,7 @@ function setAlarm() {
         inputhours < 0 || inputhours > 12 ||
         inputseconds < 0 || inputseconds > 60
     ) {
+        // show error to user to add correct time 
         window.alert("Enter Correct time please")
         return
     }
@@ -67,8 +68,8 @@ function setAlarm() {
         list.appendChild(li); // add the list item in our unordered list
         li.appendChild(deleteBtn); // add the delete button on list item 
 
-        var TrashIcon = document.createElement("i"); // trash can icon from font awsome 
-        TrashIcon.className = "fa-solid fa-trash";
+        var TrashIcon = document.createElement("i"); // trash can icon from font-awsome 
+        TrashIcon.className = "fa-solid fa-trash"; // 
         deleteBtn.appendChild(TrashIcon); // add the icon to the delete button as child 
 
     } else {
@@ -78,9 +79,10 @@ function setAlarm() {
 
     var deletebtns = document.getElementsByClassName("Delete"); // count the number of delete buttons on page
     var i;
+    //console.log(deletebtns.length);
     for (i = 0; i < deletebtns.length; i++) {
-        deletebtns[i].addEventListener("click", function() {
-            const value = this.parentElement.className; // value is taken from each delete button className 
+        deletebtns[i].addEventListener("click", function() { // make each delete button as different 
+            const value = this.parentElement.className; // value is taken from each delete button as className of parent 
             //console.log("Delete is Pressed for " + value); 
 
             if (alarms.includes(value)) { // if array contains the alarm 
@@ -90,8 +92,4 @@ function setAlarm() {
             this.parentElement.style.display = 'none'; // remove element form DOM 
         });
     }
-}
-
-for (var i = 0; i < alarms.length; i++) {
-    console.log(alarms[i]);
 }
